@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,CAAC,CAAA;EACG,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,UAAU;CACzB",
+    "sources": [
+        "../practica/sass/css.scss",
+        "../practica/sass/_base.scss"
+    ],
+    "names": [],
+    "file": "css.css"
+}

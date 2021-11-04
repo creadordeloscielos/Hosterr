@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*_____ BLUE BUTTON _____*/
+@mixin btn-blue {
+  background: #4977ea;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 15px 20px;
+  font-family: "Lato", sans-serif;
+  transition: 0.5s ease-in-out;
+  &:hover {
+    background: #4977ead0;
+  }
+}
+/*_____ BLUE BUTTON _____*/
+
+a,
+p {
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  color: #777673;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 1400px;
+  width: 80%;
+  margin: auto;
+}
+
+.dp-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  background-color: #f9f4e8;
+  height: 100vh;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 5vh);
+  }
+}
+
+.menu {
+  flex-grow: 1;
+
+  ul {
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0px 20px;
+    transition: color 0.3s ease-in-out;
+    font-size: 1.1em;
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.login {
+  a:last-child {
+    @include btn-blue();
+  }
+}
+
+.img {
+
+  text-align: center;
+  width: 50%;
+  img {
+    width: 400px;
+  }
+}
+
+.banner{
+.txt{
+  width: 50%;
+  h1{
+    font-family: "Playfair Display", serif;
+  }
+  p{
+    margin: 10px auto;
+  }
+}
+}
+
+input[type="email"] {
+  width: 100%;
+  margin-right: 15px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  border: none;
+  font-family: "Lato", sans-serif;
+  color: #777673;
+  font-size: 1.1em;
+  
+  &:focus{
+    outline-color: rgba(31, 30, 30, 0.178);
+  }
+}
+
+input[type="button"] {
+  @include btn-blue();
+  padding: 14px 30px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: none;
+  font-size: 1.1em;
+
+}
+
+.redes {
+  a {
+    display: inline-block;
+    margin-right: 15px;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: #000;
+    }
+  }
+
+  img {
+    margin-right: 10px;
+
+    width: 40px;
+  }
+
+  .txt {
+    line-height: 1.4;
+    .title {
+      p {
+        font-weight: normal;
+        font-family: "Playfair Display", serif;
+      }
+    }
+    p {
+      font-weight: bold;
+      color: #000;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 940px) {
+
+  header{
+    height: initial; 
+    .container{
+      height: initial;
+      padding: 25px 0px;
+    }
+  }
+  
+
+  nav {
+    display: block !important;
+  }
+
+  .menu {
+    border: 1px solid red;
+    flex-direction: column;
+
+    ul,
+    .login {
+      display: block;
+    }
+
+    a {
+      display: block !important;
+      border: 1px solid rgb(25, 0, 255);
+    }
+  }
+
+  .banner{
+    flex-direction: column-reverse;
+    .txt,.img{
+      width: 100%;
+    }
+  }
+
+  .mail{
+    margin: 20px auto;
+  }
+
+  .redes{
+    margin-top: 25px;
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .redes {
+    display: block;
+  
+    ul {
+      justify-content: flex-start;
+    }
+  }
+
+  .help {
+    margin-top: 25px;
+    justify-content: flex-start;
+  }
+
+  .banner{
+    .img{
+      img{
+        width:350px;
+      }
+    }
+  }
+  .mail{
+    flex-wrap: wrap;
+  }
+  input[type="email"] ,input[type="button"] {
+    width: 100%;
+    margin-right:0px;
+    margin-bottom: 5px;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+ 
+  .banner{
+    .img{
+      img{
+        width:100%;
+      }
+    }
+  }
+}
