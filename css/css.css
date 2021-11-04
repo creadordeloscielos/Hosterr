@@ -151,6 +151,8 @@ input[type="button"] {
   cursor: pointer;
   border: none;
   font-size: 1.1em;
+      -webkit-appearance: none;
+
 }
 
 input[type="button"]:hover {
